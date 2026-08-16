@@ -1,0 +1,35 @@
+--Table creation in SQL
+
+create table Employees(
+    emp_Id number Primary key,
+    emp_Name Varchar(50),
+    Department varchar(50)
+    Salary number,
+);
+
+insert into Employees
+values(01, Rutuja,'IT', 800000);
+
+insert into Employees
+values(02, Kshitija, 'HR', 1200000);
+
+insert into Employees
+values(03, Rutu, 'IT', 800000);
+
+
+-- Table creation in PLSQL
+
+DECLARE
+    message VARCHAR2(100) := 'Table created';
+BEGIN
+    EXECUTE IMMEDIATE '
+        CREATE TABLE Employees (
+            emp_Id NUMBER PRIMARY KEY,
+            emp_Name VARCHAR2(50),
+            Department VARCHAR2(50),
+            Salary NUMBER
+        )';
+
+    DBMS_OUTPUT.PUT_LINE(message);
+END;
+/

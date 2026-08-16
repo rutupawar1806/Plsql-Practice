@@ -1,0 +1,17 @@
+--Create a PLSQL Block to display an employees name and salary
+
+Declare
+v_emp_name Employees.emp_name%TYpe;
+v_salary Employees.salary%TYPE;
+
+Begin
+select emp_Name, salary
+into v_emp_name, v_salary
+from Employees
+where emp_Id= 01;
+
+dbms_output.put_line('Employee name: ' || v_emp_name);
+dbms_output.put_line('Salary: ' || v_salary)
+
+END;
+/
