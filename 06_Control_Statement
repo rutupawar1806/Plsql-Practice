@@ -1,0 +1,66 @@
+-- 1. IF STATEMENT
+DECLARE
+ID NUMBER :=10;
+
+BEGIN
+    IF ID>5 THEN
+    DBMS_OUTPUT.PUT_LINE(ID || ' ID IS GREATER THAN 5');
+    END IF;
+
+END;
+
+
+-- 2. IF Then ELSE stmt
+DECLARE
+    ID NUMBER := 10;
+BEGIN
+    IF MOD(ID, 2) = 0 THEN
+        DBMS_OUTPUT.PUT_LINE(ID || ' NUMBER IS EVEN');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE(ID || ' NUMBER IS ODD');
+    END IF;
+END;
+
+
+-- 3. IF-ELSIF-ELSE Statement 
+DECLARE
+    marks NUMBER := 75;
+
+BEGIN
+    IF marks >= 90 THEN
+        DBMS_OUTPUT.PUT_LINE('Grade A+');
+
+    ELSIF marks >= 80 THEN
+        DBMS_OUTPUT.PUT_LINE('Grade A');
+
+    ELSIF marks >= 60 THEN
+        DBMS_OUTPUT.PUT_LINE('Grade B');
+
+    ELSIF marks >= 40 THEN
+        DBMS_OUTPUT.PUT_LINE('Grade C');
+
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('Fail');
+    END IF;
+
+    END;
+
+
+-- 4. Nested IF-ELSE    
+DECLARE
+    age NUMBER := 23;
+    experience NUMBER := 2;
+
+BEGIN
+    IF age >= 18 THEN
+
+        IF experience >= 2 THEN
+            DBMS_OUTPUT.PUT_LINE('Eligible for job');
+        ELSE
+            DBMS_OUTPUT.PUT_LINE('Not enough experience');
+        END IF;
+
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('Age is below 18');
+    END IF;
+END;

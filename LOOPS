@@ -1,0 +1,42 @@
+-- 1. SIMPLE LOOP
+
+DECLARE
+    n NUMBER := 1;
+
+BEGIN
+    LOOP
+        DBMS_OUTPUT.PUT_LINE(n);
+        n := n + 1;
+
+        EXIT WHEN n > 10;
+    END LOOP;
+END;
+/
+
+-- 2. WHILE LOOP
+DECLARE
+    n NUMBER := 1;
+
+BEGIN
+    WHILE n <= 10 LOOP
+    DBMS_OUTPUT.PUT_LINE(n);
+
+    n:=n+1;
+    END LOOP;
+
+END;
+
+
+-- 3. Numeric loop/FOR LOOP 
+DECLARE
+    n NUMBER := 1;
+
+BEGIN
+    FOR n IN 1..10 LOOP
+    DBMS_OUTPUT.PUT_LINE(n);
+    
+    END LOOP;
+
+END;
+
+-- 4. CURSER FOR LOOP
